@@ -229,6 +229,8 @@ public class LauncherActivity extends Activity implements View.OnClickListener,
         setFont();
 
         mHomeLayout = findViewById(R.id.home_layout);
+        mHomeLayout.setVerticalScrollBarEnabled(false);
+        mHomeLayout.setHorizontalScrollBarEnabled(false);
         mHomeLayout.setOnLongClickListener(this);
 
         imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
