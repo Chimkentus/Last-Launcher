@@ -220,6 +220,9 @@ public class LauncherActivity extends Activity implements View.OnClickListener,
         setTheme(theme);
 
         setContentView(R.layout.activity_launcher);
+        ScrollView scrollView = findViewById(R.id.scrollView);
+        scrollView.setVerticalScrollBarEnabled(false);
+        scrollView.setHorizontalScrollBarEnabled(false);
 
         // set the status bar color as per theme
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
@@ -229,8 +232,6 @@ public class LauncherActivity extends Activity implements View.OnClickListener,
         setFont();
 
         mHomeLayout = findViewById(R.id.home_layout);
-        mHomeLayout.setVerticalScrollBarEnabled(false);
-        mHomeLayout.setHorizontalScrollBarEnabled(false);
         mHomeLayout.setOnLongClickListener(this);
 
         imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
